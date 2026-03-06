@@ -40,3 +40,30 @@ This University Management System is a comprehensive platform designed to stream
 - **Git** - Version Control
 
 ## 🏗️ System Architecture
+┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐
+│ React Frontend│────▶│ Node.js API │────▶│ MySQL DB │
+│ Port: 3000 │ │ Port: 5000 │ │ Port: 3306 │
+└─────────────────┘ └─────────────────┘ └─────────────────┘
+│ │ │
+│ │ │
+▼ ▼ ▼
+┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐
+│ Real-time │ │ File Upload │ │ phpMyAdmin │
+│ Notifications │ │ (Multer) │ │ Port: 8080 │
+└─────────────────┘ └─────────────────┘ └─────────────────┘
+
+text
+
+## 📦 Prerequisites
+
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (v20.10+)
+- [Git](https://git-scm.com/downloads) (v2.30+)
+- Minimum 4GB RAM allocated to Docker
+- 10GB free disk space
+
+## 🚀 Quick Start
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Pydrosy/University-management-system.git
+cd school
