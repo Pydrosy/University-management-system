@@ -1,0 +1,12 @@
+
+{
+  "watch": ["server.js", "config/", "controllers/", "models/", "routes/", "utils/", "middlewares/"],
+  "ext": "js,json",
+  "ignore": ["node_modules/", "uploads/", "logs/"],
+  "exec": "node server.js",
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "legacyWatch": true,
+  "pollingInterval": 1000
+}

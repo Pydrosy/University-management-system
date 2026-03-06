@@ -1,0 +1,23 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install ALL dependencies including react-scripts
+RUN npm install --legacy-peer-deps
+
+# Copy application code
+COPY . .
+
+# Set environment variables for React
+ENV NODE_ENV=development
+ENV WDS_SOCKET_PORT=0
+ENV CHOKIDAR_USEPOLLING=true
+ENV FAST_REFRESH=false
+
+EXPOSE 3000
+
+# Start the app
+CMD ["npm", "start"]
